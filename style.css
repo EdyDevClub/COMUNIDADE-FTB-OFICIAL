@@ -1,0 +1,177 @@
+/* RESET E ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Robot", sans-serif;
+}
+
+body {
+    overflow-x: hidden; /* Impede o movimento horizontal */
+    width: 100%;
+}
+
+
+/* ESTRUTURA PRINCIPAL */
+.caixa-principal {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* TÍTULO */
+h1 {
+    margin-top: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.2em rgb(0, 255, 21);
+}
+
+/* BOTÕES */
+button, .botao-principal {
+    margin-bottom: 100px;
+    height: 60px;
+    width: 366px;
+    background: #2B99FF;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+button:hover, .botao-principal:hover {
+    background-color: #2b99ff88;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/* VÍDEOS */
+.caixa-dois-videos {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin-bottom: 50px;
+    margin-top: -2;
+}
+
+.iframe-video {
+    width: 800px;
+    height: 450px;
+}
+
+.iframe-video-03, .iframe-video-02 {
+    height: 288px;
+    width: 510px;
+    margin-top: -70px;
+}
+
+/* IMAGENS */
+.img-tamplet {
+    width: 100%;
+    height: 690px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.img-tamplet02 {
+    width: 100%;
+    height: 480px;
+    position: absolute;
+    top: 113%;
+    z-index: -1;
+}
+
+.imgs-ebooks {
+    display: flex;
+    flex-direction: row;
+    background-color: #0B131C;
+    padding: 150px;
+    border-radius: 8px;
+    margin-top: -2%;
+}
+
+.imagem-ebook {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+}
+
+/* MÁSCARA */
+.mascara-video {
+    width: 100%;
+    height: 690px;
+    background: linear-gradient(109deg, rgba(14, 17, 22, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+/* TRANSIÇÕES */
+#page2, #page3 {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#page2.visible, #page3.visible {
+    opacity: 1;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1100px) {
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .caixa-principal {
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    button {
+        width: 300px;
+    }
+
+    .iframe-video, .iframe-video-03, .iframe-video-02 {
+        width: 350px;
+        height: 200px;
+    }
+
+    .caixa-dois-videos {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -24%;
+    }
+
+    .img-tamplet, .mascara-video {
+        height: 459px;
+        max-width: 100%;
+    }
+
+    .img-tamplet02 {
+        max-width: 100%;
+        height: 469px;
+        top: 68%;
+    }
+
+    .imagem-ebook {
+        margin: 0 auto;
+    }
+
+    .imgs-ebooks {
+        flex-direction: column;
+        padding: 50px;
+        border-radius: 0;
+    }
+}
