@@ -6,10 +6,12 @@
     font-family: "Robot", sans-serif;
 }
 
-body {
-    overflow-x: hidden; /* Impede o movimento horizontal */
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-}
+    overflow-x: hidden;
+  }
 
 
 /* ESTRUTURA PRINCIPAL */
@@ -73,7 +75,7 @@ button:hover, .botao-principal:hover {
 
 /* IMAGENS */
 .img-tamplet {
-    width: 100%;
+    width: 100vw;
     height: 690px;
     position: absolute;
     top: 0;
@@ -81,7 +83,7 @@ button:hover, .botao-principal:hover {
 }
 
 .img-tamplet02 {
-    width: 100%;
+    width: 100vw;
     height: 480px;
     position: absolute;
     top: 113%;
@@ -105,7 +107,7 @@ button:hover, .botao-principal:hover {
 
 /* MÁSCARA */
 .mascara-video {
-    width: 100%;
+    width: 100vw;
     height: 690px;
     background: linear-gradient(109deg, rgba(14, 17, 22, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
     position: absolute;
@@ -113,7 +115,7 @@ button:hover, .botao-principal:hover {
     z-index: -1;
 }
 
-/* TRANSIÇÕES */
+/* TRANSIÇÕES 
 #page2, #page3 {
     opacity: 0;
     transition: opacity 2s;
@@ -123,14 +125,15 @@ button:hover, .botao-principal:hover {
     opacity: 1;
 }
 
-/* RESPONSIVIDADE */
+ RESPONSIVIDADE */
 @media (max-width: 1100px) {
-    body {
-        max-width: 100%;
+    html, body {
+        width: 100%;
         overflow-x: hidden;
-    }
+      }
 
     .caixa-principal {
+        max-width: 100%;
         background-position: center;
     }
 
@@ -143,9 +146,23 @@ button:hover, .botao-principal:hover {
         width: 300px;
     }
 
+     .iframe-video {
+        margin-left: 17px;
+    }
+
     .iframe-video, .iframe-video-03, .iframe-video-02 {
-        width: 350px;
+        display: flex;
+        align-items: center;
+        max-width: 94%;
         height: 200px;
+    }
+
+    .iframe-video-02 {
+        margin-top: 15px;
+    }
+
+    .iframe-video-03{
+        margin-top: 15px;
     }
 
     .caixa-dois-videos {
@@ -157,6 +174,7 @@ button:hover, .botao-principal:hover {
     .img-tamplet, .mascara-video {
         height: 459px;
         max-width: 100%;
+
     }
 
     .img-tamplet02 {
@@ -173,5 +191,6 @@ button:hover, .botao-principal:hover {
         flex-direction: column;
         padding: 50px;
         border-radius: 0;
+        margin-top: -51px;
     }
 }
